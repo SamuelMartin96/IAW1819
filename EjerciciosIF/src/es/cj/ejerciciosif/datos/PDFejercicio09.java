@@ -44,11 +44,11 @@ public class PDFejercicio09 {
 			}
 		}
 		if (FechaCorrecta)
-			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + mes + "/" + anyo);
+			System.out.println("Próxima Fecha: " + (dia + 1) + "/" + mes + "/" + anyo);
 		else if (FechaCorrecta)
-			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + (mes + 1) + "/" + anyo);
+			System.out.println("Próxima Fecha: " + (dia - 29) + "/" + (mes + 1) + "/" + anyo);
 		else if (FechaCorrecta)
-			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + (mes + 1) + "/" + (anyo + 1));
+			System.out.println("Próxima Fecha: " + (dia - 29 ) + "/" + (mes - 11) + "/" + (anyo + 1));
 		else
 			System.out.println("Fecha Incorrecta");
 	sc.close();
