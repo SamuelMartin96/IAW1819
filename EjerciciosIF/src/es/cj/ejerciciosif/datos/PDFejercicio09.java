@@ -21,7 +21,7 @@ public class PDFejercicio09 {
 		boolean FechaCorrecta = false;
 		
 		if(anyo >= 0) {
-			if(mes >1 && mes <=12) {
+			if(mes >=1 && mes <=12) {
 				switch (mes) {
 				case 1:
 				case 2:
@@ -44,7 +44,11 @@ public class PDFejercicio09 {
 			}
 		}
 		if (FechaCorrecta)
-			System.out.println("Fecha Correcta: " + dia + "/" + mes + "/" + anyo);
+			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + mes + "/" + anyo);
+		else if (FechaCorrecta)
+			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + (mes + 1) + "/" + anyo);
+		else if (FechaCorrecta)
+			System.out.println("Fecha Correcta: " + (dia + 1) + "/" + (mes + 1) + "/" + (anyo + 1));
 		else
 			System.out.println("Fecha Incorrecta");
 	sc.close();
