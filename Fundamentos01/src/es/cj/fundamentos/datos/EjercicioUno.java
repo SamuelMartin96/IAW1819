@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EjercicioUno {
 	
-	//Programa que realice la conversión de grados Fahrenheit a Celsisus.//
+	//Programa que realice la conversión de grados Celsius a Fahrenheit.//
 	//Los grados Celsius debe introducirlos el usuario.//
 	
 	private static Scanner sc = new Scanner(System.in);
