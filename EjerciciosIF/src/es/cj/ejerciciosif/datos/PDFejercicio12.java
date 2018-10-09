@@ -72,7 +72,7 @@ public class PDFejercicio12 {
 					break;
 				}
 			}
-		} if(TotalDias == dia2 - dia1 + 30 * (mes2 - mes1) + 365 * (anyo2 - anyo1)) {
+		} if(TotalDias == (dia2 - dia1 + 30) * (mes2 - mes1 + 365) * (anyo2 - anyo1)) {
 			System.out.println("Diferencia de días: " + TotalDias);
 		}else {
 			System.out.println("Incorrecto");
