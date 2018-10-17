@@ -29,12 +29,12 @@ public class PDFejercicio08 {
 		
 		for (int i = 0; i < numero.length; i++) {
 			for (int j = i+1; j < numero.length; j++) {
-				if (numero[i] < numero[i]) {
+				if (numero[i] < numero[j]) {
 					ordenado = numero[i];
 					numero[i] = numero[j];
 					numero[j] = ordenado;
-					System.out.println("Mayor a Menor: " + numero[j]);
 				}
+				System.out.println("Mayor a Menor: " + numero[j]);
 			}
 		}
 	sc.close();
