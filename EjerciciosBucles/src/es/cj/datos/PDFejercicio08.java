@@ -31,7 +31,7 @@ public class PDFejercicio08 {
 		Arrays.sort(numero);
 		
 		for (int i = 0; i < numero.length; i++) {
-			System.out.println("Ordenados de mayor a menor: " + numero[i]);
+			System.out.println("Ordenados de menor a mayor: " + numero[i]);
 		}
 	sc.close();
 	}
