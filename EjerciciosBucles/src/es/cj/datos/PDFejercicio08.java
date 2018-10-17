@@ -15,7 +15,6 @@ public class PDFejercicio08 {
 		
 		int totalnumeros = sc.nextInt();
 		int[] numero = new int[totalnumeros];
-		int ordenado;
 		
 		for (int i = 0; i < numero.length; i++) {
 			System.out.println("Número " + (i+1) + " : ");
