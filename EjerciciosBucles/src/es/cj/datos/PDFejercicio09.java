@@ -27,6 +27,8 @@ public class PDFejercicio09 {
 			System.out.println(numero[i]);
 		}
 		
+		
+		
 	sc.close();
 	}
 }
