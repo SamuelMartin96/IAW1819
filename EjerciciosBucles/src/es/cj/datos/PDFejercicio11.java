@@ -18,7 +18,7 @@ public class PDFejercicio11 {
 			cuadrado = numero*numero;
 			System.out.println("El cuadrado de " + numero + " es " + cuadrado);
 			System.out.println("Nº: ");
-			numero =sc.nextInt();
+			numero = sc.nextInt();
 		}
 		System.out.println("El número introducido no es correcto.");
 	sc.close();
