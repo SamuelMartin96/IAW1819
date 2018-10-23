@@ -90,7 +90,6 @@ public class Explicacion {
 				posiciones += i + " ";
 			}
 		}
-		
 		return posiciones;
 	}
 }
