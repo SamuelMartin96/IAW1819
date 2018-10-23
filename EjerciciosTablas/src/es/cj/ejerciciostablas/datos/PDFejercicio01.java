@@ -27,13 +27,13 @@ public class PDFejercicio01 {
 		
 		System.out.println("Los números son: ");
 		System.out.println("----------------");
+		
 		for (int i = 0; i < numero.length; i++) {
 			System.out.println(numero[i]);
 			
 			if (numero[i] < 0) {
 				contN++;
 			}
-			
 			
 			if (numero[i] > 0) {
 				contP++;
