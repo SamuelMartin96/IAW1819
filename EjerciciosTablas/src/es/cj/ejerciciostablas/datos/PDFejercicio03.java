@@ -29,18 +29,18 @@ public class PDFejercicio03 {
 		int par[] = new int[contP];
 		int impar[] = new int[contI];
 		
-		int iteradorPar = 0;
-		int iteradorImpar = 0;
+		int recorridoPar = 0;
+		int recorridoImpar = 0;
 		
 		//Almacenamos los números pares en una tabla y los impares en otra//
 		
 		for (int i = 0; i < 10; i++) {
 			if (numeros[i]%2==0) {
-			par[iteradorPar] = numeros[i];
-			iteradorPar++;
+				par[recorridoPar] = numeros[i];
+				recorridoPar++;
 			}else {
-				impar[iteradorImpar] = numeros[i];
-				iteradorImpar++;
+				impar[recorridoImpar] = numeros[i];
+				recorridoImpar++;
 			}
 		}
 		
@@ -51,7 +51,7 @@ public class PDFejercicio03 {
 		System.out.println("Números Pares");
 		System.out.println("-------------");
 		
-		for (int i = 0; i < iteradorPar; i++) {
+		for (int i = 0; i < recorridoPar; i++) {
 			System.out.print(par[i] + " - ");
 		}
 		
@@ -61,7 +61,7 @@ public class PDFejercicio03 {
 		System.out.println("Números Impares");
 		System.out.println("---------------");
 		
-		for (int i = 0; i < iteradorImpar; i++) {
+		for (int i = 0; i < recorridoImpar; i++) {
 			System.out.print(impar[i] + " - ");
 		}
 	}
