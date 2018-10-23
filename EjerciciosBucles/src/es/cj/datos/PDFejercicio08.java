@@ -14,7 +14,7 @@ public class PDFejercicio08 {
 		System.out.println("-----------------------------------------");
 		
 		int totalnumeros = sc.nextInt();
-		int[] numero = new int[totalnumeros];
+		int [] numero = new int[totalnumeros];
 		
 		for (int i = 0; i < numero.length; i++) {
 			System.out.println("Número " + (i+1) + " : ");
