@@ -16,6 +16,7 @@ public class PDFejercicio02 {
 		for (int i = 0; i < numeros.length; i++) {
 			numeros[i] = new Random().nextInt(10);
 		}
+		
 		System.out.println(Arrays.toString(numeros));
 		Arrays.sort(numeros);
 		System.out.println(Arrays.toString(numeros));
