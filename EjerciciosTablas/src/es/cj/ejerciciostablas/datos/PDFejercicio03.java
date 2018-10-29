@@ -14,7 +14,7 @@ public class PDFejercicio03 {
 		//Generamos los números del array, los mostramos y contamos cuáles son pares y cuáles impares//
 		
 		for (int i = 0; i < numeros.length; i++) {
-			numeros[i] = new Random().nextInt(10);
+			numeros[i] = new Random().nextInt(10) +1;
 			
 			if (numeros[i]%2==0) {
 				contP++;
