@@ -13,15 +13,38 @@ import java.util.Scanner;
 
 public class PDFejercicio07 {
 	
-	private static int alumnos[][] = new int [10][3];
+	private static int alumnos[][];
 	
 	//Medias Trimestres//
-	private static double mediasT[] = new double [alumnos[0].length];
+	private static double mediasT[];
 	
 	//Medias Alumnos//
-	private static double mediasA[] = new double [alumnos.length];
+	private static double mediasA[];
+	
+	private static Scanner sc = new Scanner (System.in);
 	
 	public static void main(String[] args) {
+		int numAlumnos = 0;
+		do {
+			System.out.println("Nº Alumnos: ");
+			numAlumnos = sc.nextInt();
+		} while (numAlumnos <= 0);
+		
+		int trimestres = 0;
+		do {
+			System.out.println("Nº Trimestres: ");
+			trimestres = sc.nextInt();
+		} while (trimestres <= 0);
+		
+		//Datos de alumnnos (notas)//
+		alumnos = new int[numAlumnos][trimestres];
+		
+		//Medias por trimestres//
+		mediasT = new double [alumnos[0].length];
+		
+		//Medias por alumnos//
+		mediasA = new double [alumnos.length];
+		
 		leerNotas();
 		
 		mostrarNotas();
@@ -29,6 +52,8 @@ public class PDFejercicio07 {
 		calcularMedias();
 		
 		mostrarMedias();
+		
+	sc.close();
 	}
 
 	private static void mostrarMedias() {
@@ -53,14 +78,14 @@ public class PDFejercicio07 {
 				mediasT[j] += alumnos[i][j];
 				mediasA[i] += alumnos[i][j];
 			}
-			mediasA[i] /=mediasT.length;
+			mediasA[i] = Math.rint((mediasA[i] / mediasT.length)*100/100);
 		}
 		calculasMediasTrimestres();
 	}
 
 	private static void calculasMediasTrimestres() {
 		for (int i = 0; i < mediasT.length; i++) {
-			mediasT[i]/= mediasA.length;
+			mediasT[i] = mediasA[i] = Math.rint((mediasA[i] / mediasT.length)*100/100);
 		}
 	}
 
