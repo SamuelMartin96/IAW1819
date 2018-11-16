@@ -8,36 +8,37 @@ package es.cj.datos;
 public class PDFejercicio01 {
 	
 	public static void main(String[] args) {
-		String cadena0 = new String ("*");
 		String cadena1 = new String ("PRUEBA");
 		String cadena2 = new String ("prueba");
-		String cadena3 = new String ("*");
 		
 		System.out.println(cadena2.toUpperCase()); //Mostramos el String en mayúsculas//
 
 		System.out.println(cadena1.toLowerCase()); //Mostramos el String en minúsculas//
 		
-		System.out.println(cadena1.substring(0, 2)); //2 Primeros caracteres//
-		
-		System.out.println(cadena1.substring(4, 6)); //2 Últimos caracteres//
-		
+		if (cadena1.length() >= 2) {
+			System.out.println(cadena1.substring(0, 2)); //2 Primeros caracteres//
+			System.out.println(cadena1.substring(cadena1.length()-2, cadena1.length())); //2 Últimos caracteres//
+		}
 		
 		//Contamos el número de veces que se repite el último caracter//
-		int posicion, contador = 0;
-		 posicion = cadena1.indexOf("A");
-		 while (posicion != -1) {
-			 contador++;
-			 posicion = cadena1.indexOf("A", posicion + 1);
-		 }
-		 System.out.println(contador);
+		String ultimo = cadena1.substring(cadena1.length()-1);
+		int contador = 0;
+		for (int i = 0; i < cadena1.length(); i++) {
+			if (cadena1.substring(i, i+1).equalsIgnoreCase(ultimo)) {
+				contador++;
+			}
+		}
+		System.out.println(contador);
 		 
-		 //Reemplazamos el primer carácter por el primer carácter en mayúscula//
-		 cadena1 = cadena2.replace("p", "P");
-		 System.out.println(cadena1);
+		//Reemplazamos el primer carácter por el primer carácter en mayúscula//
+		String primero = cadena2.substring(0, 1);
+		cadena2 = cadena2.replaceAll(primero.toLowerCase(), primero.toUpperCase());
+		System.out.println(cadena2);
 		 
-		 //Añadimos al principio y al final de la cadena "*"//
-		 cadena0 = cadena0.concat(cadena1); //Principio de la cadena//
-		 cadena0 = cadena0.concat(cadena3); //Final de la cadena//
-		 System.out.print(cadena0);
+		//Añadimos al principio y al final de la cadena "***"//
+		StringBuffer sb = new StringBuffer(cadena1);
+		sb.append("***");
+		sb.insert(0, "***");
+		System.out.println(sb.toString());
 	}
 }
