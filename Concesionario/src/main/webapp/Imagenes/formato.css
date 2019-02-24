@@ -1,0 +1,45 @@
+@charset "windows-1252";
+html,
+cuerpo {
+  altura: 100%;
+}
+
+cuerpo {
+  pantalla: -ms-flexbox;
+  pantalla: flexión;
+  -ms-flex-align: centro;
+  alinear elementos: centro;
+  relleno superior: 40px;
+  fondo de relleno: 40px;
+  color de fondo: # f5f5f5;
+}
+
+.form-signin {
+  ancho: 100%;
+  ancho máximo: 330px;
+  relleno: 15px;
+  margen: automático;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  posición: relativa;
+  tamaño de caja: border-box;
+  altura: auto;
+  relleno: 10px;
+  tamaño de letra: 16px;
+}
+.form-signin .form-control: focus {
+  índice z: 2;
+}
+.form-signin input [type = "email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input [type = "contraseña"] {
+  margen inferior: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
