@@ -65,7 +65,9 @@ public class RegistrarUsu extends HttpServlet {
 				response.sendRedirect("jsp/Registrar.jsp?mensaje=Usuario registrado correctamente");
 			} else {
 				response.sendRedirect("jsp/Registrar.jsp?mensaje=Error al registrar al usuario");
-			}
+			} 
+		} else {
+			response.sendRedirect("jsp/Registrar.jsp?mensaje=El usuario ya existe");
 		}
 	}
 }

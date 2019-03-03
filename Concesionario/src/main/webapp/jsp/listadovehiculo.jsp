@@ -69,7 +69,7 @@
 				}
 			%>
 		</table>
-		<center>
+		<center>		
 			<form action="<%=request.getContextPath()%>" method="GET"
 				style="display: inline">
 				<button type="button" class="btn btn-secondary btn-block"

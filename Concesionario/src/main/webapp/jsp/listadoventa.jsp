@@ -1,3 +1,12 @@
+<%@page import="es.cj.bean.Empleado"%>
+<%@page import="es.cj.dao.EmpleadoDAOImpl"%>
+<%@page import="es.cj.dao.EmpleadoDAO"%>
+<%@page import="es.cj.bean.Vehiculo"%>
+<%@page import="es.cj.dao.VehiculoDAOImpl"%>
+<%@page import="es.cj.dao.VehiculoDAO"%>
+<%@page import="es.cj.dao.ClienteDAO"%>
+<%@page import="es.cj.dao.ClienteDAOImpl"%>
+<%@page import="es.cj.bean.Cliente"%>
 <%@page import="es.cj.bean.Usuario"%>
 <%@page import="es.cj.dao.VentaDAOImpl"%>
 <%@page import="es.cj.bean.Venta"%>
@@ -19,7 +28,7 @@
 <body class="bg-white">
 	<header></header>
 	<br>
-	<h1 style="text-align: center;">LISTADO DE CONCESIONARIOS</h1>
+	<h1 style="text-align: center;">LISTADO DE VENTAS</h1>
 	<div class="col-md-1"></div>
 	<div class="col-md-14">
 		<table class="table table-striped table-white table-hover">
@@ -46,7 +55,7 @@
 					Conexion con = new Conexion(usu, pass, driver, bd);
 
 					VentaDAO vDAO = new VentaDAOImpl();
-					List<Venta> ventas = vDAO.listar(con, (Usuario) session.getAttribute("usuarioWeb"));
+					List<Venta> ventas = vDAO.listar(con, (Usuario) session.getAttribute("usuarioWeb"));	
 			%>
 			<div class="row cold-md-12 text-center">
 				<%

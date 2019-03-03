@@ -54,7 +54,7 @@
 				<span id="spPassword" style="color: red"></span>
 			</div>
 			<div class="form-group">
-				<input type="submit" class="btn btn-primary btn-block" value="Enviar">
+				<input type="submit" class="btn btn-primary btn-block" value="Registrar">
 			</div>
 			<button type="button" class="btn btn-secondary btn-block"
 					onclick="location.href='../index.jsp'"> Volver

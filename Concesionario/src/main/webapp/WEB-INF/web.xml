@@ -74,6 +74,12 @@
   	<description></description>
   	<servlet-class>es.cj.controller.altaventa</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>GererarPDF</servlet-name>
+  	<display-name>GererarPDF</display-name>
+  	<description></description>
+  	<servlet-class>es.cj.controller.GererarPDF</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ValidarUsuario</servlet-name>
   	<url-pattern>/ValidarUsuario</url-pattern>
@@ -109,6 +115,10 @@
   <servlet-mapping>
   	<servlet-name>altaventa</servlet-name>
   	<url-pattern>/altaventa</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GererarPDF</servlet-name>
+  	<url-pattern>/GererarPDF</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
   	<welcome-file>index.jsp</welcome-file>
