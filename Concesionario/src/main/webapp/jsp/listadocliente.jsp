@@ -15,6 +15,27 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+
+<style type="text/css">
+.modal {
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.modal:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: " ";
+		height: 100%;
+	}
+}
+
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+</style>
 </head>
 <body class="bg-white">
 	<header></header>
@@ -60,9 +81,36 @@
 						<form action="<%=request.getContextPath()%>" method="GET">
 							<input type="hidden" name="accion" value="bajaCliente" /> <input
 								type="hidden" name="DNIcliente" value="<%=c.getdNIcliente()%>" />
-							<button type="button" class="btn btn-danger"
-								onclick="location.href='../BorrarCliente?DNIcliente=<%=c.getdNIcliente()%>'">Dar de
+							<button type="button" class="btn btn-danger" data-toggle="modal"
+								data-target="#modalBorrar<%=c.getdNIcliente()%>">Dar de
 								baja</button>
+							<!-- Modal -->
+							<div class="modal fade" id="modalBorrar<%=c.getdNIcliente()%>"
+								tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+								aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Borrar
+												Cliente</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">×</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											¿Desea borrar el cliente
+											<%=c.getNombre()%>?
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">No</button>
+											<button type="button" class="btn btn-primary"
+												onclick="location.href='../BorrarCliente?DNIcliente=<%=c.getdNIcliente()%>'">Sí</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</form>
 					</td>
 				</tr>
