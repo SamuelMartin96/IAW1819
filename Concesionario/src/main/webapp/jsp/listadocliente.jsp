@@ -105,7 +105,7 @@
 										<div class="modal-footer">
 											<button type="button" class="btn btn-secondary"
 												data-dismiss="modal">No</button>
-											<button type="button" class="btn btn-primary"
+											<button type="button" class="btn btn-primary btn-success"
 												onclick="location.href='../BorrarCliente?DNIcliente=<%=c.getdNIcliente()%>'">Sí</button>
 										</div>
 									</div>

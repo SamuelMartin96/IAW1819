@@ -16,15 +16,37 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+
+<script type="text/javascript" src="../js/Validaciones.js"></script>
+
 </head>
 <body class="bg-white">
 	<header></header>
 	<br>
 	<h1 style="text-align: center;">REALIZAR VENTAS</h1>
 	<div class="row justify-content-center">
+			<%
+				String error = request.getParameter("mensaje");
+				if (error != null) {
+			%>
+			<div class="alert alert-warning alert-dismissible fade show"
+				role="alert">
+				<%
+					out.print(error);
+				%>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<%
+				}
+			%>
+		</div>
+	<div class="row justify-content-center">
 		<div class="container">
-			<div class="row vertical-offset-100">
-				<div class="col-md-4 col-md-offset-4">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-md-offset-6">
 					<div class="panel panel-default">
 						<div align="center">
 							<%
@@ -32,20 +54,25 @@
 									response.sendRedirect("../index.jsp?mensaje=Error de sesión");
 								} else {
 							%>
-							<form class="form" method="post" action="../altaventa">
+							<form class="form" method="post" action="../altaventa" onsubmit="return validarFormularioVenta()">
+							<div class="row cold-md-12 text-center">
 								<fieldset>
-									<div class="row cold-md-12 text-center"></div>
 									<label>IDventa</label> <input class="form-control"
-										placeholder="IDVenta" name="IDVenta" type="text">
+										placeholder="IDVenta" name="IDVenta" required="required" type="text">
+										<span id="spiDVenta" style="color: red"></span>
 									<br> <label>IDvehiculo</label> <input class="form-control"
-										placeholder="IDVehiculo" name="IDVehiculo" type="text"> <br>
-									<label>DNIempleado</label> <input class="form-control"
-										placeholder="DNIempleado" name="DNIempleado" type="text"> <br>
-									<label>DNIcliente</label> <input class="form-control"
-										placeholder="DNIcliente" name="DNIcliente" type="text"> <br>
-									<button type="submit" class="btn btn-lg btn-success"
-										onclick="location.href='listadoventa.jsp'">Realizar</button>
+										placeholder="IDVehiculo" name="IDVehiculo" required="required" type="text">
+									    <span id="spiDVehiculo" style="color: red"></span>
+									<br> <label>DNIempleado</label> <input class="form-control"
+										placeholder="DNIempleado" name="DNIempleado" required="required" type="text">
+										<span id="spdNIempleado" style="color: red"></span>
+									<br> <label>DNIcliente</label> <input class="form-control"
+										placeholder="DNIcliente" name="DNIcliente" required="required" type="text">
+										<span id="spdNIcliente" style="color: red"></span>
+										
+									<br> <button type="submit" class="btn btn-lg btn-success btn-block">Realizar</button>
 								</fieldset>
+								</div>
 							</form>
 							<br>
 							<form action="<%=request.getContextPath()%>" method="post"

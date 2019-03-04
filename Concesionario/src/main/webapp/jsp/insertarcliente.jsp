@@ -16,6 +16,9 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+
+<script type="text/javascript" src="../js/Validaciones.js"></script>
+
 </head>
 <body class="bg-white">
 	<header></header>
@@ -23,27 +26,31 @@
 	<h1 style="text-align: center;">ALTA DE CLIENTES</h1>
 	<div class="row justify-content-center">
 		<div class="container">
-			<div class="row vertical-offset-100">
-				<div class="col-md-4 col-md-offset-4">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-md-offset-6">
 					<div class="panel panel-default">
 						<div align="center">
+						
 							<%
 								if (session.getAttribute("usuarioWeb") == null || session.isNew()) {
 									response.sendRedirect("../index.jsp?mensaje=Error de sesión");
 								} else {
 							%>
-							<form class="form" method="post" action="../altacliente">
+							<form class="form" method="post" action="../altacliente" onsubmit="return validarFormularioCliente()">
+							<div class="row cold-md-12 text-center">
 								<fieldset>
-									<div class="row cold-md-12 text-center"></div>
 									<label>DNI</label> <input class="form-control"
-										placeholder="DNIcliente" name="DNIcliente" type="text">
+										placeholder="DNIcliente" name="DNIcliente" required="required" type="text">
+										<span id="spDNI" style="color: red"></span>
 									<br> <label>NOMBRE</label> <input class="form-control"
-										placeholder="Nombre" name="Nombre" type="text"> <br>
+										placeholder="Nombre" name="Nombre" required="required" type="text"> <br>
+										<span id="spNombre" style="color: red"></span>
 									<label>EDAD</label> <input class="form-control"
-										placeholder="Edad" name="Edad" type="number"> <br>
-									<button type="submit" class="btn btn-lg btn-success"
-										onclick="location.href='listadocliente.jsp'">Enviar</button>
+										placeholder="Edad" name="Edad" required="required" type="number"> <br>
+										<span id="spEdad" style="color: red"></span>
+									<button type="submit" class="btn btn-lg btn-success btn-block">Alta</button>
 								</fieldset>
+								</div>
 							</form>
 							<br>
 							<form action="<%=request.getContextPath()%>" method="post"
