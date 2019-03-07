@@ -45,12 +45,12 @@
 		<form class="form" method="post" action="../RegistrarUsu" onsubmit="return validarFormulario()">
 			<div class="form-group">
 				<label class="control-label" for="Username">Username</label>
-				<input type="text" id="username" name="username" class="form-control">
+				<input type="text" id="Username" name="Username" required class="form-control">
 				<span id="spUsername" style="color: red"></span>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="Password">Password</label>
-				<input type="Password" id="password" name="password" class="form-control">
+				<input type="Password" id="Password" name="Password" required class="form-control">
 				<span id="spPassword" style="color: red"></span>
 			</div>
 			<div class="form-group">

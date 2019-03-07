@@ -46,7 +46,7 @@
 	<div class="row justify-content-center">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-6 col-md-offset-6">
+				<div class="row justify-content-center">
 					<div class="panel panel-default">
 						<div align="center">
 							<%
